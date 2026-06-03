@@ -1,0 +1,392 @@
+/* ============================
+   RESPONSIVE DESIGN
+   ============================ */
+
+/* TABLET & LARGE DEVICES (1024px and up) */
+@media (max-width: 1024px) {
+  .section-container {
+    padding: 0 var(--space-lg);
+  }
+
+  .navbar {
+    padding: var(--space-md) var(--space-lg);
+  }
+
+  section {
+    padding: var(--space-2xl) 0;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+}
+
+/* TABLET (768px to 1023px) */
+@media (max-width: 768px) {
+  /* NAVIGATION */
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(11, 15, 25, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    padding: var(--space-lg) 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+  }
+
+  .nav-links[aria-expanded="true"] {
+    max-height: 500px;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: var(--space-md) var(--space-lg);
+    font-size: var(--font-size-base);
+  }
+
+  .nav-links a.active::after {
+    display: none;
+  }
+
+  /* HERO */
+  .hero {
+    height: auto;
+    min-height: 500px;
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-xl);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-base);
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: var(--space-md);
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: var(--space-2xl) var(--space-lg);
+  }
+
+  section h2 {
+    font-size: 2rem;
+    margin-bottom: var(--space-2xl);
+  }
+
+  /* ABOUT */
+  .about-highlights {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* SKILLS */
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* PROJECTS */
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+
+  /* CONTACT */
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+/* MOBILE (480px to 767px) */
+@media (max-width: 480px) {
+  :root {
+    font-size: 15px;
+  }
+
+  /* HEADER */
+  .navbar {
+    padding: var(--space-md) var(--space-md);
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  /* HERO */
+  .hero {
+    min-height: 400px;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-subtitle {
+    font-size: var(--font-size-lg);
+    margin-bottom: var(--space-lg);
+  }
+
+  .hero-description {
+    font-size: var(--font-size-sm);
+    margin-bottom: var(--space-lg);
+  }
+
+  /* SECTIONS */
+  section {
+    padding: var(--space-xl) var(--space-md);
+  }
+
+  section h2 {
+    font-size: 1.75rem;
+    margin-bottom: var(--space-xl);
+  }
+
+  h1 {
+    font-size: 1.75rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.125rem;
+  }
+
+  /* BUTTONS */
+  .btn {
+    padding: var(--space-sm) var(--space-lg);
+    font-size: var(--font-size-sm);
+  }
+
+  /* ABOUT */
+  .about-content p {
+    font-size: 1rem;
+  }
+
+  .about-highlights {
+    gap: var(--space-lg);
+  }
+
+  .highlight {
+    padding: var(--space-lg);
+  }
+
+  /* SKILLS */
+  .skill-badge {
+    font-size: var(--font-size-xs);
+    padding: var(--space-xs) var(--space-md);
+  }
+
+  /* PROJECTS */
+  .project-image-placeholder {
+    height: 150px;
+  }
+
+  .project-content {
+    padding: var(--space-lg);
+  }
+
+  .project-description {
+    font-size: var(--font-size-sm);
+  }
+
+  .project-links {
+    flex-direction: column;
+    gap: var(--space-sm);
+  }
+
+  .link-button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* CONTACT */
+  .contact-content {
+    gap: var(--space-xl);
+  }
+
+  .contact-intro {
+    font-size: 1rem;
+  }
+
+  .form-group {
+    gap: var(--space-xs);
+  }
+
+  .form-group label {
+    font-size: var(--font-size-sm);
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: var(--space-md);
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .contact-info h3 {
+    font-size: 1.125rem;
+    margin-bottom: var(--space-md);
+  }
+
+  .social-links a {
+    padding: var(--space-md);
+    font-size: var(--font-size-sm);
+  }
+
+  /* FOOTER */
+  footer {
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  footer p {
+    font-size: var(--font-size-sm);
+  }
+
+  /* REDUCE ANIMATIONS ON SMALL SCREENS */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* SMALL MOBILE (< 360px) */
+@media (max-width: 360px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+  }
+
+  .navbar {
+    padding: var(--space-sm);
+  }
+
+  section {
+    padding: var(--space-lg) var(--space-sm);
+  }
+}
+
+/* LARGE SCREENS (1280px and up) */
+@media (min-width: 1280px) {
+  .section-container {
+    max-width: 1280px;
+  }
+
+  .navbar {
+    padding: var(--space-lg) 5%;
+  }
+
+  section {
+    padding: var(--space-3xl) 0;
+  }
+
+  /* ENHANCED ANIMATIONS FOR LARGER SCREENS */
+  .project-card {
+    transition: all var(--transition-normal);
+  }
+
+  .project-card:hover {
+    box-shadow: 0 30px 60px rgba(56, 189, 248, 0.25);
+  }
+
+  .highlight {
+    transition: all var(--transition-slow);
+  }
+
+  .highlight:hover {
+    box-shadow: 0 20px 40px rgba(56, 189, 248, 0.15);
+  }
+}
+
+/* DARK MODE PREFERENCE (Optional for future) */
+@media (prefers-color-scheme: dark) {
+  /* Already dark by default, but can add enhancements */
+}
+
+/* LIGHT MODE SUPPORT (Optional for future) */
+@media (prefers-color-scheme: light) {
+  /* Can add light mode styles here later */
+}
+
+/* HIGH CONTRAST MODE */
+@media (prefers-contrast: more) {
+  :root {
+    --primary: #0066ff;
+    --accent: #6633ff;
+  }
+
+  .skill-badge,
+  .tech-tag,
+  .link-button {
+    border-width: 2px;
+  }
+}
+
+/* REDUCED MOTION SUPPORT */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
