@@ -42,14 +42,19 @@
     background: rgba(11, 15, 25, 0.95);
     backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border-color);
-    padding: var(--space-lg) 0;
+    padding: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height var(--transition-normal);
+    transition: max-height var(--transition-normal), padding var(--transition-normal);
   }
 
   .nav-links[aria-expanded="true"] {
     max-height: 500px;
+    padding: var(--space-lg) 0;
+  }
+
+  .nav-links:not([aria-expanded="true"]) {
+    border-bottom: none;
   }
 
   .nav-links li {
