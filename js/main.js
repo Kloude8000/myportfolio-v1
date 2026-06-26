@@ -14,7 +14,7 @@ if (mobileMenuToggle) {
   });
 
   // Close menu when a link is clicked
-  document.querySelectorAll('.nav-links a').forEach(link => {
+  document.querySelectorAll('.nav-links a, .nav-cta').forEach(link => {
     link.addEventListener('click', () => {
       mobileMenuToggle.setAttribute('aria-expanded', 'false');
       navLinks.setAttribute('aria-expanded', 'false');

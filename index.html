@@ -4,7 +4,7 @@
   <!-- METADATA -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Full Stack Developer portfolio showcasing projects and skills." />
+  <meta name="description" content="Aspiring full-stack developer building LMS, e-commerce, and web applications. Open to internships, freelance work, and collaboration." />
   <meta name="keywords" content="developer, portfolio, full stack, web development" />
   <meta name="author" content="Rafiu Yussif" />
   <meta name="theme-color" content="#38bdf8" />
@@ -12,16 +12,16 @@
   <!-- OPEN GRAPH - Social Media Preview -->
   <meta property="og:type" content="website" />
   <meta property="og:title" content="Rafiu Yussif | Full Stack Developer" />
-  <meta property="og:description" content="Full Stack Developer portfolio showcasing projects and skills." />
+  <meta property="og:description" content="Aspiring full-stack developer building LMS, e-commerce, and web applications. Open to internships, freelance work, and collaboration." />
   <meta property="og:image" content="assets/images/og-image.png" />
   <meta property="og:url" content="https://rafiuyussif.dev" />
 
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Rafiu Yussif | Full Stack Developer" />
-  <meta name="twitter:description" content="Full Stack Developer portfolio showcasing projects and skills." />
+  <meta name="twitter:description" content="Aspiring full-stack developer building LMS, e-commerce, and web applications. Open to internships, freelance work, and collaboration." />
 
-  <title>Rafiu Yussif | Full Stack Developer</title>
+  <title>Rafiu Yussif | Aspiring Full Stack Developer</title>
 
   <!-- STYLESHEETS -->
   <link rel="stylesheet" href="css/variables.css" />
@@ -39,7 +39,16 @@
   <!-- NAVIGATION -->
   <header role="banner">
     <nav class="navbar" role="navigation" aria-label="Main navigation">
-      <a href="#home" class="logo">Rafiu Yussif</a>
+      <a href="#home" class="logo">
+        <img
+          src="assets/images/profile6.jpg"
+          alt="Rafiu Yussif"
+          class="logo-avatar"
+          width="36"
+          height="36"
+        />
+        <span class="logo-text">Rafiu Yussif</span>
+      </a>
 
       <button class="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span>
@@ -54,23 +63,31 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <a href="#contact" class="btn btn-primary nav-cta">Contact</a>
     </nav>
   </header>
 
   <main id="main">
     <!-- HERO SECTION -->
     <section id="home" class="hero" aria-labelledby="hero-title">
-      <div class="hero-content">
-        <h1 id="hero-title">Hi, I'm Rafiu Yussif</h1>
-        <p class="hero-subtitle">Full Stack Developer</p>
-        <p class="hero-description">
-          I build modern, responsive web applications that solve real problems.
-          Experienced in frontend and backend development with a focus on clean code and user experience.
-        </p>
+      <div class="hero-inner section-container">
+        <div class="hero-content">
+          <p class="availability-badge hero-badge" role="status">
+            <span class="availability-dot" aria-hidden="true"></span>
+            Available for new opportunities
+          </p>
+          <h1 id="hero-title">Hi, I'm Rafiu Yussif</h1>
+          <p class="hero-subtitle">Full Stack Developer</p>
+          <p class="hero-description">
+            I build modern, responsive web applications with a focus on clean code and practical problem-solving.
+            Currently sharpening my full-stack skills through real projects in LMS, e-commerce, and production web apps.
+          </p>
 
-        <div class="hero-buttons">
-          <a href="#projects" class="btn btn-primary">View My Work</a>
-          <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          <div class="hero-buttons">
+            <a href="#projects" class="btn btn-primary">View My Work</a>
+            <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+          </div>
         </div>
       </div>
     </section>
@@ -79,36 +96,68 @@
     <section id="about" aria-labelledby="about-title">
       <div class="section-container">
         <h2 id="about-title">About Me</h2>
-        
-        <article class="about-content">
-          <p>
-            I am a full-stack developer in training with a solid understanding of software development fundamentals. My journey began in 2024, driven by curiosity about how software systems are built.
-            Over time, I explored Python and its ecosystem, including Pygame, Tkinter, and Django. I also gained exposure to C++, Java, VB.NET, SQL, and basic systems programming. This exploration helped me build a broad technical foundation across different areas of development.
-            In late 2025, I shifted my focus toward full-stack development, where I am currently improving my skills in building modern web applications.
-            I enjoy continuous learning, solving problems, and building real-world projects that are practical and meaningful.
-          </p>
+        <p class="section-intro">
+          A developer growing through hands-on projects — from Python fundamentals to full-stack web applications.
+        </p>
 
-          <p>
-            When I'm not coding, I enjoy <strong>contributing to open source</strong>, learning new technologies,
-            and sharing knowledge with the developer community. I'm always eager to take on new challenges and work with
-            teams that value innovation and continuous improvement.
-          </p>
+        <div class="about-layout">
+          <aside class="about-profile">
+            <ul class="about-facts">
+              <li>
+                <span class="fact-label">Focus</span>
+                <span class="fact-value">Full-stack web development</span>
+              </li>
+              <li>
+                <span class="fact-label">Journey</span>
+                <span class="fact-value">Learning since 2024</span>
+              </li>
+              <li>
+                <span class="fact-label">Stack</span>
+                <span class="fact-value">React, Node.js, MySQL</span>
+              </li>
+            </ul>
+          </aside>
 
-          <div class="about-highlights">
-            <div class="highlight">
-              <h3>Problem Solving</h3>
-              <p>Breaking down complex challenges into elegant solutions</p>
+          <article class="about-content">
+            <p>
+              I'm an aspiring full-stack developer with a solid foundation in software development fundamentals.
+              My journey began in 2024, driven by curiosity about how software systems are built. Over time, I explored
+              Python and its ecosystem, including Pygame, Tkinter, and Django. I also gained exposure to C++, Java, VB.NET, 
+              SQL, and basic systems programming. This exploration helped me build a broad technical foundation across different 
+              areas of development. 
+            </p>
+
+            <p>
+              In late 2025, I shifted my focus toward full-stack development, where I am currently 
+              improving my skills in building modern web applications. I enjoy continuous learning, solving problems, and 
+              building real-world projects that are practical and meaningful.
+            </p>
+
+            <div class="about-highlights">
+              <div class="highlight">
+                <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/>
+                </svg>
+                <h3>Problem Solving</h3>
+                <p>Breaking down complex challenges into clear, maintainable solutions</p>
+              </div>
+              <div class="highlight">
+                <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                </svg>
+                <h3>Collaboration</h3>
+                <p>Working effectively with teams on real-world products and shared codebases</p>
+              </div>
+              <div class="highlight">
+                <svg class="highlight-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                </svg>
+                <h3>Continuous Learning</h3>
+                <p>Staying current with web technologies through projects and community engagement</p>
+              </div>
             </div>
-            <div class="highlight">
-              <h3>Collaboration</h3>
-              <p>Working effectively with designers, developers, and stakeholders</p>
-            </div>
-            <div class="highlight">
-              <h3>Learning</h3>
-              <p>Continuously updating skills and staying current with tech trends</p>
-            </div>
-          </div>
-        </article>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -116,10 +165,18 @@
     <section id="skills" aria-labelledby="skills-title">
       <div class="section-container">
         <h2 id="skills-title">Skills & Technologies</h2>
+        <p class="section-intro">
+          Technologies I use to build full-stack applications, from responsive interfaces to API-driven backends.
+        </p>
 
         <div class="skills-grid">
           <article class="skill-category">
-            <h3>Frontend</h3>
+            <div class="skill-category-header">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+              </svg>
+              <h3>Frontend</h3>
+            </div>
             <ul class="skill-list">
               <li><span class="skill-badge">HTML5</span></li>
               <li><span class="skill-badge">CSS3</span></li>
@@ -129,27 +186,44 @@
           </article>
 
           <article class="skill-category">
-            <h3>Backend</h3>
+            <div class="skill-category-header">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="8" rx="2"/><rect x="2" y="14" width="20" height="8" rx="2"/><path d="M6 6h.01"/><path d="M6 18h.01"/><path d="M18 6h.01"/><path d="M18 18h.01"/>
+              </svg>
+              <h3>Backend</h3>
+            </div>
             <ul class="skill-list">
               <li><span class="skill-badge">Node.js</span></li>
               <li><span class="skill-badge">Express</span></li>
               <li><span class="skill-badge">Python</span></li>
+              <li><span class="skill-badge">Django</span></li>
             </ul>
           </article>
 
           <article class="skill-category">
-            <h3>Databases & Tools</h3>
+            <div class="skill-category-header">
+              <svg class="skill-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5"/><path d="M3 12a9 3 0 0 0 18 0"/>
+              </svg>
+              <h3>Databases & Tools</h3>
+            </div>
             <ul class="skill-list">
-              <!-- <li><span class="skill-badge">MongoDB</span></li> -->
               <li><span class="skill-badge">MySQL</span></li>
-              <li><span class="skill-badge">Git and GitHub</span></li>
+              <li><span class="skill-badge">Git & GitHub</span></li>
               <li><span class="skill-badge">VS Code</span></li>
               <li><span class="skill-badge">Postman</span></li>
-              <!-- <li><span class="skill-badge">AWS</span></li> -->
-              <!-- <li><span class="skill-badge">Heroku</span></li> -->
-              <!-- <li><span class="skill-badge">Docker</span></li> -->
             </ul>
           </article>
+        </div>
+
+        <div class="skills-learning">
+          <h3>Currently Exploring</h3>
+          <div class="skills-learning-badges">
+            <span class="skill-badge skill-badge-muted">API Integration</span>
+            <span class="skill-badge skill-badge-muted">REST APIs</span>
+            <span class="skill-badge skill-badge-muted">Deployment (Railway, Render, Vercel)</span>
+            <span class="skill-badge skill-badge-muted">Responsive UI patterns</span>
+          </div>
         </div>
       </div>
     </section>
@@ -158,18 +232,21 @@
     <section id="projects" aria-labelledby="projects-title">
       <div class="section-container">
         <h2 id="projects-title">Featured Projects</h2>
+        <p class="section-intro">
+          Selected work across learning platforms, e-commerce, and production university systems.
+        </p>
 
         <div class="projects-grid">
 
           <article class="project-card">
             <div class="project-image-placeholder">
-              <!-- <span>Image</span> -->
               <img src="assets/images/studyhub-img2.png" alt="Screenshot of StudyHub LMS project" class="project-image" />
             </div>
             <div class="project-content">
               <h3>StudyHub LMS</h3>
+              <p class="project-outcome">Deployed on Vercel · Full-stack learning management system</p>
               <p class="project-description">
-                A full-stack learning management system for course delivery, student enrollment, and progress tracking with a structured backend architecture.
+                A learning management system for course delivery, student enrollment, and progress tracking with a structured backend architecture.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">React</span>
@@ -180,21 +257,27 @@
                 <span class="tech-tag">JavaScript</span>
               </div>
               <div class="project-links">
-                <a href="https://studyhub-sage-tau.vercel.app" target="_blank" class="link-button">View Project</a>
-                <a href="https://github.com/Kloude8000/studyhub.git" target="_blank" class="link-button">GitHub</a>
+                <a href="https://studyhub-sage-tau.vercel.app" target="_blank" rel="noopener noreferrer" class="link-button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  View Project
+                </a>
+                <a href="https://github.com/Kloude8000/studyhub.git" target="_blank" rel="noopener noreferrer" class="link-button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-1.005-.54-1.695-.185-2.13-.12-.66.075-1.275.345-1.275 1.335 0 .96.675 1.785 1.23 2.25.72.615 1.95 2.25 2.76 3.375.54.72 1.335 1.2 2.25 1.395 1.155.24 2.25.12 3.09-.45.12-.9.465-1.515.855-1.86-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-image-placeholder">
-              <!-- <span>Image</span> -->
-               <img src="assets/images/fastbuy-img2.png" alt="Screenshot of FastBuy e-commerce platform project" class="project-image" />
+              <img src="assets/images/fastbuy-img2.png" alt="Screenshot of FastBuy e-commerce platform project" class="project-image" />
             </div>
             <div class="project-content">
               <h3>FastBuy</h3>
+              <p class="project-outcome">Live demo on Vercel · Full-stack e-commerce platform</p>
               <p class="project-description">
-                A full-stack e-commerce platform for product listings, user management, and core marketplace functionality with backend-driven data flow.
+                An e-commerce platform for product listings, user management, and core marketplace functionality with backend-driven data flow.
               </p>
               <div class="project-tech">
                 <span class="tech-tag">HTML5</span>
@@ -205,21 +288,27 @@
                 <span class="tech-tag">MySQL</span>
               </div>
               <div class="project-links">
-                <a href="https://fastbuy-lime.vercel.app" target="_blank" class="link-button">View Project</a>
-                <a href="https://github.com/Kloude8000/fastbuy.git" target="_blank" class="link-button">GitHub</a>
+                <a href="https://fastbuy-lime.vercel.app" target="_blank" rel="noopener noreferrer" class="link-button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  View Project
+                </a>
+                <a href="https://github.com/Kloude8000/fastbuy.git" target="_blank" rel="noopener noreferrer" class="link-button">
+                  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-1.005-.54-1.695-.185-2.13-.12-.66.075-1.275.345-1.275 1.335 0 .96.675 1.785 1.23 2.25.72.615 1.95 2.25 2.76 3.375.54.72 1.335 1.2 2.25 1.395 1.155.24 2.25.12 3.09-.45.12-.9.465-1.515.855-1.86-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                  GitHub
+                </a>
               </div>
             </div>
           </article>
 
           <article class="project-card">
             <div class="project-image-placeholder">
-              <!-- <span>Image</span> -->
               <img src="assets/images/infotess-utas-img1.png" alt="Screenshot of Infotess UTAS project" class="project-image" />
             </div>
             <div class="project-content">
               <h3>Infotess UTAS</h3>
+              <p class="project-outcome">Live production app · Frontend contributor on team project</p>
               <p class="project-description">
-                INFOTESS UTAS web application for course information, learning resources, student support, and dues payment, built with a structured backend architecture and modern frontend technologies.
+                University web application for course information, learning resources, student support, and dues payment.
               </p>
               <div class="project-role">
                 <span>Role: Frontend Contributor</span>
@@ -233,8 +322,10 @@
                 <span class="tech-tag">MySQL</span>
               </div>
               <div class="project-links">
-                <a href="https://infotessutas.com/" target="_blank" class="link-button">View Project</a>
-                <a href="#" class="link-button">GitHub</a>
+                <a href="https://infotessutas.com/" target="_blank" rel="noopener noreferrer" class="link-button">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                  View Project
+                </a>
               </div>
             </div>
           </article>
@@ -247,68 +338,214 @@
     <section id="contact" aria-labelledby="contact-title">
       <div class="section-container contact-container">
         <h2 id="contact-title">Let's Connect</h2>
-        
-        <p class="contact-intro">
-          Have a project in mind or want to chat about web development? Feel free to reach out!
+
+        <p class="section-intro contact-intro">
+          Open to internships, freelance work, and collaboration. Tell me about your project or opportunity — I usually reply within 48 hours.
+        </p>
+
+        <p class="availability-badge" role="status">
+          <span class="availability-dot" aria-hidden="true"></span>
+          Available for new opportunities
         </p>
 
         <div class="contact-content">
+          <aside class="contact-info">
+            <h3>Get in Touch</h3>
+            <p class="contact-info-text">
+              Prefer email? Reach out directly or connect on social media.
+            </p>
+
+            <ul class="social-links">
+              <li>
+                <a href="mailto:mynewhood123@gmail.com" class="social-link">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <rect x="2" y="4" width="20" height="16" rx="2"/>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                  </svg>
+                  <span class="social-link-text">
+                    <span class="social-platform">Email</span>
+                    <span class="social-handle">mynewhood123@gmail.com</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/Kloude8000" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-1.005-.54-1.695-.185-2.13-.12-.66.075-1.275.345-1.275 1.335 0 .96.675 1.785 1.23 2.25.72.615 1.95 2.25 2.76 3.375.54.72 1.335 1.2 2.25 1.395 1.155.24 2.25.12 3.09-.45.12-.9.465-1.515.855-1.86-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                  <span class="social-link-text">
+                    <span class="social-platform">GitHub</span>
+                    <span class="social-handle">Kloude8000</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/rafiu-yussif" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                  <span class="social-link-text">
+                    <span class="social-platform">LinkedIn</span>
+                    <span class="social-handle">rafiu-yussif</span>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/Kloude8000" target="_blank" rel="noopener noreferrer" class="social-link">
+                  <svg class="social-icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                  <span class="social-link-text">
+                    <span class="social-platform">Twitter</span>
+                    <span class="social-handle">Kloude8000</span>
+                  </span>
+                </a>
+              </li>
+            </ul>
+
+            <a href="mailto:mynewhood123@gmail.com" class="btn btn-secondary contact-email-btn">
+              Write Directly
+            </a>
+          </aside>
+
           <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group honeypot" aria-hidden="true">
+              <label for="website">Website</label>
+              <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off" />
+            </div>
+
             <div class="form-group">
               <label for="name">Name *</label>
-              <input type="text" id="name" name="name" required aria-required="true" />
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Your name"
+                required
+                aria-required="true"
+              />
               <span class="error-message" role="alert" aria-live="polite"></span>
             </div>
 
             <div class="form-group">
               <label for="email">Email *</label>
-              <input type="email" id="email" name="email" required aria-required="true" />
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@email.com"
+                required
+                aria-required="true"
+              />
+              <span class="error-message" role="alert" aria-live="polite"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <select id="subject" name="subject" required aria-required="true">
+                <option value="" disabled selected>Select a topic</option>
+                <option value="Job Opportunity">Job Opportunity</option>
+                <option value="Freelance Project">Freelance Project</option>
+                <option value="Collaboration">Collaboration</option>
+                <option value="General Inquiry">General Inquiry</option>
+              </select>
               <span class="error-message" role="alert" aria-live="polite"></span>
             </div>
 
             <div class="form-group">
               <label for="message">Message *</label>
-              <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Tell me about your project or opportunity..."
+                required
+                aria-required="true"
+              ></textarea>
               <span class="error-message" role="alert" aria-live="polite"></span>
             </div>
 
             <button type="submit" class="btn btn-primary">Send Message</button>
             <span class="form-status" role="status" aria-live="polite"></span>
           </form>
-
-          <div class="contact-info">
-            <h3>Other Ways to Reach Me</h3>
-            <ul class="social-links">
-              <li>
-                <a href="mailto:mynewhood123@gmail.com" aria-label="Send email">
-                  Email
-                </a>
-              </li>
-              <li>
-                <a href="https://github.com/Kloude8000" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
-                  GitHub
-                </a>
-              </li>
-              <li>
-                <a href="https://linkedin.com/in/yourname" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
-                  LinkedIn
-                </a>
-              </li>
-              <li>
-                <a href="https://twitter.com/yourname" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
-                  Twitter
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer role="contentinfo">
-    <p>&copy; 2026 rafdev. All rights reserved.</p>
+  <footer role="contentinfo" class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#home" class="logo footer-logo">
+          <img
+            src="assets/images/profile6.jpg"
+            alt=""
+            class="logo-avatar"
+            width="32"
+            height="32"
+          />
+          <span class="logo-text">Rafiu Yussif</span>
+        </a>
+        <p class="footer-tagline">Aspiring full-stack developer building practical web applications.</p>
+      </div>
+
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <h3 class="footer-heading">Navigate</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-connect">
+        <h3 class="footer-heading">Connect</h3>
+        <ul class="footer-social">
+          <li>
+            <a href="mailto:mynewhood123@gmail.com" aria-label="Send email to Rafiu Yussif">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2"/>
+                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+              </svg>
+              Email
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Kloude8000" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-1.005-.54-1.695-.185-2.13-.12-.66.075-1.275.345-1.275 1.335 0 .96.675 1.785 1.23 2.25.72.615 1.95 2.25 2.76 3.375.54.72 1.335 1.2 2.25 1.395 1.155.24 2.25.12 3.09-.45.12-.9.465-1.515.855-1.86-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              GitHub
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/rafiu-yussif" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/Kloude8000" target="_blank" rel="noopener noreferrer" aria-label="Twitter profile">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              Twitter
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Rafiu Yussif. All rights reserved.</p>
+      <p class="footer-built">Built with HTML, CSS &amp; JavaScript</p>
+      <a href="#home" class="back-to-top">Back to top</a>
+    </div>
   </footer>
 
   <!-- SCRIPTS -->

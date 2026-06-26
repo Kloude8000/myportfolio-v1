@@ -11,38 +11,44 @@ if (contactForm) {
 async function handleFormSubmit(e) {
   e.preventDefault();
 
-  // Get form elements
   const formElements = contactForm.elements;
   const nameInput = formElements['name'];
   const emailInput = formElements['email'];
+  const subjectInput = formElements['subject'];
   const messageInput = formElements['message'];
+  const honeypotInput = formElements['_gotcha'];
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const statusMessage = contactForm.querySelector('.form-status');
 
-  // Reset previous errors
   clearErrors();
+  statusMessage.className = 'form-status';
+  statusMessage.textContent = '';
 
-  // Validate form
-  const isValid = validateForm(nameInput, emailInput, messageInput);
+  if (honeypotInput && honeypotInput.value.trim()) {
+    return;
+  }
+
+  const isValid = validateForm(nameInput, emailInput, subjectInput, messageInput);
 
   if (!isValid) {
     return;
   }
 
-  // Disable submit button and show loading state
   submitButton.disabled = true;
   const originalButtonText = submitButton.textContent;
   submitButton.textContent = 'Sending...';
 
-  // Get form data
+  const subject = subjectInput.value.trim();
   const formData = {
     name: nameInput.value.trim(),
     email: emailInput.value.trim(),
-    message: messageInput.value.trim()
+    subject: subject,
+    message: messageInput.value.trim(),
+    _subject: `Portfolio: ${subject}`,
+    _gotcha: ''
   };
 
   try {
-    // Using Formspree (free email service)
     const response = await fetch('https://formspree.io/f/mpqeagln', {
       method: 'POST',
       headers: {
@@ -52,29 +58,30 @@ async function handleFormSubmit(e) {
       body: JSON.stringify(formData)
     });
 
-    // Show success message
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+      const errorDetail = data.error || 'Failed to send message. Please try again later.';
+      showErrorMessage(statusMessage, errorDetail);
+      return;
+    }
+
     showSuccessMessage(statusMessage);
-
-    // Reset form
     contactForm.reset();
-
-    // Scroll to status message
-    statusMessage.scrollIntoView({ behavior: 'smooth' });
+    statusMessage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
 
   } catch (error) {
     console.error('Form submission error:', error);
     showErrorMessage(statusMessage, 'Failed to send message. Please try again later.');
   } finally {
-    // Re-enable submit button
     submitButton.disabled = false;
     submitButton.textContent = originalButtonText;
   }
 }
 
-function validateForm(nameInput, emailInput, messageInput) {
+function validateForm(nameInput, emailInput, subjectInput, messageInput) {
   let isValid = true;
 
-  // Validate name
   if (!nameInput.value.trim()) {
     showFieldError(nameInput, 'Name is required');
     isValid = false;
@@ -83,7 +90,6 @@ function validateForm(nameInput, emailInput, messageInput) {
     isValid = false;
   }
 
-  // Validate email
   if (!emailInput.value.trim()) {
     showFieldError(emailInput, 'Email is required');
     isValid = false;
@@ -92,7 +98,11 @@ function validateForm(nameInput, emailInput, messageInput) {
     isValid = false;
   }
 
-  // Validate message
+  if (!subjectInput.value.trim()) {
+    showFieldError(subjectInput, 'Please select a subject');
+    isValid = false;
+  }
+
   if (!messageInput.value.trim()) {
     showFieldError(messageInput, 'Message is required');
     isValid = false;
@@ -136,13 +146,3 @@ function showErrorMessage(statusElement, message) {
   statusElement.textContent = '✗ ' + message;
   statusElement.className = 'form-status error';
 }
-
-function simulateFormSubmission() {
-  // Simulates an async operation (like an API call)
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ success: true });
-    }, 1000);
-  });
-}
-
