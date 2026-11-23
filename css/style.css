@@ -7,9 +7,8 @@ header {
   position: sticky;
   top: 0;
   z-index: var(--z-sticky);
-  background: rgba(17, 24, 39, 0.6);
+  background: var(--header-overlay);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
 }
 
 .navbar {
@@ -17,8 +16,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--space-lg) 10%;
-  max-width: 1400px;
+  max-width: 1100px; /*1400px*/
   margin: 0 auto;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .logo {
@@ -123,7 +123,7 @@ section {
 }
 
 section:nth-child(even) {
-  background: rgba(17, 24, 39, 0.3);
+  background: var(--section-overlay);
 }
 
 .section-container {
@@ -220,7 +220,7 @@ section h2 {
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(56, 189, 248, 0.3);
+  box-shadow: 0 10px 20px var(--primary-button-shadow);
 }
 
 .btn-secondary {
@@ -255,7 +255,7 @@ section h2 {
 }
 
 .about-facts li {
-  background: rgba(31, 41, 55, 0.5);
+  background: var(--surface-overlay);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: var(--space-md);
@@ -307,8 +307,8 @@ section h2 {
 }
 
 .highlight {
-  background: rgba(56, 189, 248, 0.05);
-  border: 1px solid rgba(56, 189, 248, 0.1);
+  background: var(--primary-subtle);
+  border: 1px solid var(--primary-hover-overlay);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
   transition: all var(--transition-normal);
@@ -316,7 +316,7 @@ section h2 {
 
 .highlight:hover {
   border-color: var(--primary);
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-hover-overlay);
   transform: translateY(-4px);
 }
 
@@ -340,7 +340,7 @@ section h2 {
 }
 
 .skill-category {
-  background: rgba(31, 41, 55, 0.5);
+  background: var(--surface-overlay);
   border: 1px solid var(--border-color);
   padding: var(--space-xl);
   border-radius: var(--radius-lg);
@@ -349,7 +349,7 @@ section h2 {
 
 .skill-category:hover {
   border-color: var(--primary);
-  background: rgba(56, 189, 248, 0.05);
+  background: var(--primary-subtle);
   transform: translateY(-4px);
 }
 
@@ -377,7 +377,7 @@ section h2 {
   margin-top: var(--space-3xl);
   text-align: center;
   padding: var(--space-xl);
-  background: rgba(31, 41, 55, 0.5);
+  background: var(--surface-overlay);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
 }
@@ -396,13 +396,13 @@ section h2 {
 }
 
 .skill-badge-muted {
-  background: rgba(56, 189, 248, 0.05);
+  background: var(--primary-subtle);
   border-color: var(--border-color);
   color: var(--text-muted);
 }
 
 .skill-badge-muted:hover {
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-hover-overlay);
   color: var(--primary);
   border-color: var(--primary);
 }
@@ -413,9 +413,22 @@ section h2 {
   gap: var(--space-md);
 }
 
+/* .skill-list li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+} */
+
+.stack-icon {
+  width: 29px;
+  height: 29px;
+}
+
 .skill-badge {
-  display: inline-block;
-  background: rgba(56, 189, 248, 0.1);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: var(--primary-hover-overlay);
   border: 1px solid var(--primary);
   color: var(--primary);
   padding: var(--space-sm) var(--space-lg);
@@ -438,7 +451,7 @@ section h2 {
 }
 
 .project-card {
-  background: rgba(31, 41, 55, 0.5);
+  background: var(--surface-overlay);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   overflow: hidden;
@@ -448,13 +461,13 @@ section h2 {
 .project-card:hover {
   border-color: var(--primary);
   transform: translateY(-8px);
-  box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2);
+  box-shadow: 0 20px 40px var(--primary-card-shadow);
 }
 
 .project-image-placeholder {
   width: 100%;
   height: 200px;
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(167, 139, 250, 0.1));
+  background: linear-gradient(135deg, var(--primary-hover-overlay), var(--accent-subtle));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -495,8 +508,8 @@ section h2 {
 
 .project-role {
   margin-bottom: var(--space-lg);
-  background: rgba(56, 189, 248, 0.05);
-  border: 1px solid rgba(56, 189, 248, 0.1);
+  background: var(--primary-subtle);
+  border: 1px solid var(--primary-hover-overlay);
   padding: var(--space-md);
   border-radius: var(--radius-md);
   font-size: var(--font-size-sm);
@@ -518,7 +531,7 @@ section h2 {
 }
 
 .tech-tag {
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-hover-overlay);
   border: 1px solid var(--primary);
   color: var(--primary);
   padding: var(--space-xs) var(--space-md);
@@ -537,7 +550,7 @@ section h2 {
   align-items: center;
   gap: var(--space-sm);
   padding: var(--space-sm) var(--space-lg);
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-hover-overlay);
   border: 1px solid var(--primary);
   color: var(--primary);
   border-radius: var(--radius-md);
@@ -573,8 +586,8 @@ section h2 {
   gap: var(--space-sm);
   width: fit-content;
   padding: var(--space-sm) var(--space-lg);
-  background: rgba(16, 185, 129, 0.1);
-  border: 1px solid rgba(16, 185, 129, 0.3);
+  background: var(--success-subtle);
+  border: 1px solid var(--success-border);
   border-radius: var(--radius-full);
   color: var(--success);
   font-size: var(--font-size-sm);
@@ -613,7 +626,7 @@ section h2 {
 
 .contact-info {
   order: 2;
-  background: rgba(31, 41, 55, 0.5);
+  background: var(--surface-overlay);
   border: 1px solid var(--border-color);
   border-radius: var(--radius-lg);
   padding: var(--space-xl);
@@ -622,7 +635,7 @@ section h2 {
 
 .contact-info:hover {
   border-color: var(--primary);
-  background: rgba(56, 189, 248, 0.05);
+  background: var(--primary-subtle);
 }
 
 .contact-info h3 {
@@ -667,7 +680,7 @@ section h2 {
 .form-group input,
 .form-group textarea,
 .form-group select {
-  background: rgba(31, 41, 55, 0.5);
+  background: var(--surface-overlay);
   border: 1px solid var(--border-color);
   color: var(--text-primary);
   padding: var(--space-md);
@@ -696,8 +709,8 @@ section h2 {
 .form-group select:focus {
   outline: none;
   border-color: var(--primary);
-  background-color: rgba(56, 189, 248, 0.05);
-  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.1);
+  background-color: var(--primary-subtle);
+  box-shadow: 0 0 0 3px var(--primary-hover-overlay);
 }
 
 .form-group input::placeholder,
@@ -731,14 +744,14 @@ section h2 {
 
 .form-status.success {
   display: block;
-  background: rgba(16, 185, 129, 0.1);
+  background: var(--success-subtle);
   border: 1px solid var(--success);
   color: var(--success);
 }
 
 .form-status.error {
   display: block;
-  background: rgba(239, 68, 68, 0.1);
+  background: var(--error-subtle);
   border: 1px solid var(--error);
   color: var(--error);
 }
@@ -762,7 +775,7 @@ section h2 {
 
 .social-link:hover {
   color: var(--primary);
-  background: rgba(56, 189, 248, 0.1);
+  background: var(--primary-hover-overlay);
   border-color: var(--primary);
 }
 
@@ -800,7 +813,7 @@ section h2 {
 
 /* FOOTER */
 .site-footer {
-  background: rgba(17, 24, 39, 0.6);
+  background: var(--header-overlay);
   backdrop-filter: blur(12px);
   border-top: 1px solid var(--border-color);
   margin-top: var(--space-3xl);

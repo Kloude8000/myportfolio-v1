@@ -24,6 +24,19 @@
   --warning: #f59e0b;
   --error: #ef4444;
 
+  /* --------------------- */
+  --header-overlay: rgba(17, 24, 39, 0.6);
+  --section-overlay: rgba(17, 24, 39, 0.3);
+  --primary-button-shadow: rgba(56, 189, 248, 0.3);
+  --surface-overlay: rgba(31, 41, 55, 0.5);
+  --primary-subtle: rgba(56, 189, 248, 0.05);
+  --primary-hover-overlay: rgba(56, 189, 248, 0.1);
+  --primary-card-shadow: rgba(56, 189, 248, 0.2);
+  --accent-subtle: rgba(167, 139, 250, 0.1);
+  --success-subtle: rgba(16, 185, 129, 0.1);
+  --success-border: rgba(16, 185, 129, 0.3);
+  --error-subtle: rgba(239, 68, 68, 0.1);
+
   /* SPACING SCALE */
   --space-xs: 0.25rem; /* 4px */
   --space-sm: 0.5rem; /* 8px */
